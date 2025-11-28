@@ -6,8 +6,6 @@ Repository for the winning entry of the SQUAD x insightfactory.ai Datathon (May 
 
 **Brief:** A concise project that explores an anonymised dataset with 19 features (`X1`..`X19`) and a binary target `Y`. The goal was to analyse the data, handle class imbalance and missing values, and produce high-quality predictions evaluated by F1 score.
 
-**Winner note:** This submission placed 1st in the competition.
-
 **Repository files**
 - `train.csv` — training data (features `X1`..`X19`, target `Y`)
 - `test.csv` — test data (features only)
@@ -39,24 +37,6 @@ Modeling summary
 - **Validation:** Used cross-validation / hold-out to evaluate performance. Final reported validation F1: **0.44**.
 - **Feature engineering & tuning:** Simple, interpretable feature checks and modest hyperparameter tuning to avoid overfitting given the anonymised features.
 
-Reproducing the results
-1. Create and activate a Python environment (PowerShell example):
-
-```
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-2. Install dependencies (either create a `requirements.txt` with the packages below or install directly):
-
-```
-pip install numpy pandas scikit-learn xgboost seaborn matplotlib jupyter
-```
-
-3. Open and run the notebook `main.ipynb` (recommended) or run the provided scripts if available.
-
-4. The notebook performs EDA, preprocessing, model training, and writes predictions to `prediction.csv`.
-
 Submission format
 - The submission file must contain a header and rows ordered by `ID` (ascending):
 
@@ -67,11 +47,6 @@ ID,Y
 6,0
 ...
 ```
-
-Tips and reproducibility notes
-- Ensure all preprocessing steps that use information from `Y` (e.g., scaling based on class-specific statistics) are fitted inside cross-validation folds to prevent leakage.
-- Ordering: sort by `ID` ascending before writing the final CSV.
-- Random seeds: set seeds for deterministic model runs where possible (XGBoost `random_state`, NumPy, scikit-learn) to improve reproducibility.
 
 Potential next improvements
 - More extensive hyperparameter search (Bayesian / grid search) with nested cross-validation.
