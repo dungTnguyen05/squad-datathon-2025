@@ -34,7 +34,7 @@ EDA & Preprocessing highlights
 Modeling summary
 - **Model:** XGBoost classifier (gradient-boosted trees).
 - **Imbalance handling:** Class weighting to penalise misclassification of the minority class.
-- **Validation:** Used cross-validation / hold-out to evaluate performance. Final reported validation F1: **0.44**.
+- **Validation:** Used cross-validation / hold-out to evaluate performance, with the final solution achieving an F1 score of **0.7316** on the public leaderboard and **0.7260** on the private leaderboard.
 - **Feature engineering & tuning:** Simple, interpretable feature checks and modest hyperparameter tuning to avoid overfitting given the anonymised features.
 
 Submission format
